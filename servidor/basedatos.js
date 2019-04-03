@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://alemarchena:<password>@cluster0-ryhy7.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://ralemarchena@gmail.com:<Picapiedra2887>@cluster0-ryhy7.mongodb.net/test?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
     const collection = client.db("dbbanuncios").collection("coleccionanuncios");
