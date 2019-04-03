@@ -6,6 +6,7 @@
   "scripts": {
     "start": "servidor/index.js",
     "dev": "nodemon servidor/index.js"
+    
   },
   "keywords": [],
   "author": "",
