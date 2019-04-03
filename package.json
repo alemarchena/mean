@@ -1,7 +1,7 @@
 {
-  "name": "mean",
+  "name": "anuncios_templay",
   "version": "1.0.0",
-  "description": "",
+  "description": "publica anuncios",
   "main": "index.js",
   "scripts": {
     "start": "servidor/index.js",
