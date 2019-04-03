@@ -3,8 +3,7 @@ const mongoose = require('mongoose');
 
 const config = {
     autoIndex: false,
-    //uri: 'mongodb://localhost/mean-anuncios',
-    uri: 'mongodb+ srv://alemarchena:<Picapiedra2887>@cluster0-ryhy7.mongodb.net/test?retryWrites=true',
+    uri: 'mongodb + srv://alemarchena:<Picapiedra2887>@cluster0-ryhy7.mongodb.net/test?retryWrites=true',
     opt:{useNewUrlParser:true}
 };
 
