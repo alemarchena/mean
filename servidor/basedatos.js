@@ -2,14 +2,16 @@
 const mongoose = require('mongoose');
 
 
+
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://<alejandro>:<aaabbbccc>@cluster0-ryhy7.mongodb.net/anuncios-templay?retryWrites=true";
+const uri = "mongodb+srv://alejandro:<aaabbbccc>@cluster0-ryhy7.mongodb.net/baseanuncios?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
-client.connect(err,db => 
-    { 
-        const collection = client.db("dbbanuncios").collection("coleccionanuncios"); 
-        client.close(); 
-    });
+client.connect(err => {
+    const collection = client.db("baseanuncios").collection("coleccionanuncios");
+    // perform actions on the collection object
+    client.close();
+});
+
 
 /*
 const config = {
