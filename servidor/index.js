@@ -10,11 +10,12 @@ const app = express(); //aqui toma toda la funcionalidad del servidor  y la colo
 
 // configuracion del servidor
 app.set('puerto', process.env.PORT || 3000)
+
 app.use(morgan('start')); //las peticiones pasan por MORGAN y devuelven info tal como un error.
 app.use(express.json()); //los datos que llegan del navegador se interpretan como json
 
 // rutas para el servidor
-app.use('/api/anuncios/', require('./rutas/anuncios.rutas'));
+app.use('/', require('./rutas/anuncios.rutas'));
 
 // inicia el servidor
 
