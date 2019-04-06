@@ -1,10 +1,8 @@
 //configuracion de la base de datos en mogodb
 const mongoose = require('mongoose');
 
-
-
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://alemarchena:<Picapiedra2887>@cluster0-ndsgy.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://alemarchena:Picapiedra2887@cluster0-ndsgy.mongodb.net/anunciosbdd?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
     const collection = client.db("anunciosbdd").collection("anuncioscol");
