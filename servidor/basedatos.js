@@ -1,15 +1,10 @@
 //configuracion de la base de datos en mogodb
 const mongoose = require('mongoose');
 
-const config = {
-    autoIndex: false,
-    uri: 'mongodb+srv://alejandro:V8dZv8A7Iip1IoKr@cluster0-ryhy7.mongodb.net/anunciosbdd?retryWrites=true',
-    opt:{useNewUrlParser:true}
-};
+mongoose.connect('mongodb+srv://alejandro:V8dZv8A7Iip1IoKr@cluster0-ryhy7.mongodb.net/anunciosbdd?retryWrites=true', { useNewUrlParser: true })
+const db = mongoose.connection
 
-mongoose.connect(config.uri, config.opt)
-    .then(db => console.log('Base de datos conectada'))
-    .catch(err => console.err(err));
-
+db.on('error', error => console.error(error))
+db.once('open', error => console.log('Conectado a la base de datos'))
 
 module.exports = mongoose;
