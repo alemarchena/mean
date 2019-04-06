@@ -17,6 +17,8 @@ app.use(express.json()); //los datos que llegan del navegador se interpretan com
 app.use('/api/anuncios/', require('./rutas/anuncios.rutas'));
 
 // inicia el servidor
+const quepuerto = app.get('puerto');
+
 app.listen(app.get('puerto'), () => {
-    console.log("Servidor en puerto " + puerto);
+    console.log("Servidor en puerto " + quepuerto);
 });
