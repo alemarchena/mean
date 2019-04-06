@@ -4,7 +4,7 @@
   "description": "publica anuncios",
   "main": "index.js",
   "scripts": {
-    "start": "servidor/index.js",
+    "start": "node servidor/index.js",
     "dev": "nodemon servidor/index.js"
     
   },
