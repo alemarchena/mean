@@ -4,10 +4,10 @@ const mongoose = require('mongoose');
 
 
 const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://alejandro:<aaabbbccc>@cluster0-ryhy7.mongodb.net/baseanuncios?retryWrites=true";
+const uri = "mongodb+srv://alemarchena:<Picapiedra2887>@cluster0-ndsgy.mongodb.net/test?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
-    const collection = client.db("baseanuncios").collection("coleccionanuncios");
+    const collection = client.db("anunciosbdd").collection("anuncioscol");
     // perform actions on the collection object
     client.close();
 });
