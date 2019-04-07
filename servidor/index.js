@@ -3,8 +3,6 @@ require('dotenv').config();
 //valida la variable del servidor en produccion
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').parse('DATABASE_URL');
-    
-    
 }
 
 //requetimientos
