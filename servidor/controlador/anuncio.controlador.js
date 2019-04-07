@@ -4,6 +4,21 @@ const ModeloAnuncio = require('../modelos/modelo.anuncios');
 
 const controladorAnuncio = {};
 
+
+controladorAnuncio.leerAnunciosnormal = (req, res) => {
+    ModeloAnuncio.find(function (anuncios,errores){
+        if(anuncios)
+        {
+            res.json(anuncios);
+        }
+        if(errores)
+        {
+            console.log('Error ' + errores);
+        }
+    });
+    
+}
+
 controladorAnuncio.leerAnuncios = async (req,res) => {
     const anuncios = await ModeloAnuncio.find();
     res.json(anuncios);
