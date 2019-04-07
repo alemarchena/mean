@@ -6,17 +6,19 @@
   "scripts": {
     "start": "node servidor/index.js",
     "dev": "nodemon servidor/index.js"
-    
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
     "mongoose": "^5.4.18",
     "morgan": "^1.9.1"
   },
   "devDependencies": {
+    "dotenv": "^7.0.0",
     "nodemon": "^1.18.10"
   }
 }
