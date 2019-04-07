@@ -1,7 +1,8 @@
 //configuracion de la base de datos en mogodb
 const mongoose = require('mongoose');
+const URI = 'mongodb://localhost/mean';
+mongoose.connect(URI, { useNewUrlParser: true })
 
-mongoose.connect('mongodb+srv://alejandro:hVcBbEzFe4l4vdlG@cluster0-ndsgy.mongodb.net/anuncioscol?retryWrites=true', { useNewUrlParser: true })
 const db = mongoose.connection
 
 db.on('error', error => console.error(error))
