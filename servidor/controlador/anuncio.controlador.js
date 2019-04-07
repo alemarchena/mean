@@ -21,6 +21,7 @@ controladorAnuncio.leerAnunciosnormal = (req, res) => {
 
 controladorAnuncio.leerAnuncios = async (req,res) => {
     const anuncios = await ModeloAnuncio.find();
+    res.send(anuncios);
     res.json(anuncios);
 }
 
