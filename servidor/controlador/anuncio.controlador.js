@@ -1,7 +1,14 @@
-
+//va a tener las funciones para trabajar con la base de datos
 const ModeloAnuncio = require('../modelos/modelo.anuncios');
 
+
 const controladorAnuncio = {};
+
+
+controladorAnuncio.leerAnuncios = async (req,res) => {
+    const anuncios = await ModeloAnuncio.find();
+    res.json(anuncios);
+}
 
 controladorAnuncio.leerAnuncio = async (req,res) => {
 
@@ -26,7 +33,6 @@ controladorAnuncio.actualizarAnuncio = async (req,res) => {
         precio : req.body.precio,
         imagen : req.body.imagen
     }
-    
     await ModeloAnuncio.findByIdAndUpdate(id,{ $set:anuncio },{new: true}); //le digo que busco por id y que datos quiero actualizar, con new : true si no existe lo crea
     res.json({
         status:"Anuncio actualizado"
