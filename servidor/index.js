@@ -15,7 +15,7 @@ const rutas = require('./rutas/anuncios.rutas');
 
 //configuraciones
 app.set('puerto', process.env.PORT || 3000)
-app.set('view engine','ejs')
+app.set('view engine','ejs') //ejs como motor de plantillas
 app.set('views',__dirname + '/views')
 app.set('layout',__dirname + '/views/layouts/layout');
 

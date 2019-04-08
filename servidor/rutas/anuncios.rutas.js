@@ -1,10 +1,10 @@
 const express = require('express');
-const router = express.Router(); //guarda las rutas al servidor
+const router = express.Router();
 const controladorAnuncio= require('../controlador/anuncio.controlador');
 
 
-router.get('/pagina/', (req,res) =>{res.render('index');});
-router.get('/', controladorAnuncio.leerAnuncios);
+router.get('/pagina/', (req,res) =>{res.render('index');}); // renderiza la vista index en views
+
 router.get('/:id', controladorAnuncio.leerAnuncio);
 router.post('/', controladorAnuncio.crearAnuncio);
 router.put('/:id', controladorAnuncio.actualizarAnuncio);
