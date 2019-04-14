@@ -11,4 +11,4 @@ const anuncioscol = new Schema({
     imagen:     {type: String,required:true}
 });
 
-module.exports = mongoose.model('anuncioscol', anuncioscol); //le digo a mongodb como se va a llamar el esquema y cual es su tipo
+module.exports = mongoose.model('coleccionanuncios', anuncioscol); //le digo a mongodb como se va a llamar el esquema y cual es su tipo
