@@ -5,7 +5,7 @@ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').parse('DATABASE_URL');
 }
 
-//requetimientos
+//requerimientos
 const express = require('express');
 const morgan = require('morgan');
 const { mongoose } = require('./basedatos'); //aqui tengo la conexion de mongoose a la base de datos
