@@ -8,6 +8,8 @@ if(process.env.NODE_ENV !== 'production'){
 //requerimientos
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors');
+
 const { mongoose } = require('./basedatos'); //aqui tengo la conexion de mongoose a la base de datos
 const app = express(); //aqui toma toda la funcionalidad del servidor  y la coloca en la variable app
 const expressLayouts = require('express-ejs-layouts')
@@ -15,16 +17,14 @@ const rutas = require('./rutas/anuncios.rutas');
 
 //configuraciones
 app.set('puerto', process.env.PORT || 3000)
-app.set('view engine','ejs') //ejs como motor de plantillas
-app.set('views',__dirname + '/views')
-app.set('layout',__dirname + '/views/layouts/layout');
 
 //objetos
 app.use(morgan('start')); //las peticiones pasan por MORGAN y devuelven info tal como un error.
 app.use(express.json()); //los datos que llegan del navegador se interpretan como json
-app.use(expressLayouts);
+
 app.use(express.static('/servidor/public'));
 app.use('/', rutas);
+app.use(cors({ origin:'https://mean-templay.herokuapp.com/'}));
 
 app.listen(app.get('puerto'), () => {
     const puertoconectado = app.get('puerto');

@@ -3,7 +3,6 @@ const router = express.Router(); //guarda las rutas al servidor
 const controladorAnuncio= require('../controlador/anuncio.controlador');
 
 
-router.get('/pagina/', (req,res) =>{res.render('index');});
 router.get('/', controladorAnuncio.leerAnuncios);
 router.get('/:id', controladorAnuncio.leerAnuncio);
 router.post('/', controladorAnuncio.crearAnuncio);

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="row">
+    <div class="col s5">
+      <div class="card">
+        <div class="card-container">
+          <!-- Creo una variable #variableFormulario 
+          y le asigno el formulario completo para luego pasarlo al método AgregarAnuncio-->
+          <form #variableFormulario="ngForm" (ngSubmit)="AgregarAnuncio(variableFormulario)">
+            <!-- Input de Materialize-->
+            <div class="row">
+              <div class="input-field col s12">
+                <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.nombre" placeholder="Ingrese el nombre del anuncio">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="idmapa" #idmapa="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.idmapa"
+                  placeholder="Ingrese el id del mapa para el anuncio">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="titulo" #titulo="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.titulo"
+                  placeholder="Ingrese el titulo del anuncio ">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="descripcion" #descripcion="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.descripcion"
+                  placeholder="Ingrese la descripcion del anuncio">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="precio" #precio="ngModel"
+                  [(ngModel)]="anunciosService.anuncioSeleccionado.precio" placeholder="Ingrese el precio del anuncio">
+              </div>
+              <div class="input-field col s12">
+                <input type="text" name="imagen" #imagen="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.imagen"
+                  placeholder="Ingrese la ruta a la imagen">
+              </div>
+
+              <div class="card-action">
+                  <div class="input-field col s12">
+                    <button class="btn right" (click)= ResetearFormulario(variableFormulario)>Nuevo</button>
+                    <button class="btn right" style="margin-left: 2px;">Guardar</button>
+                  </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col s7">
+
+    </div>
+  </div>
+</div>
