@@ -18,4 +18,5 @@ export class Anuncios
     precio: Number;
     imagen: String;
 
+    
 }

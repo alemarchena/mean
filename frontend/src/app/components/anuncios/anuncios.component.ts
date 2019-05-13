@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { AnunciosService } from '../../services/anuncios.service';
 import { NgForm } from '@angular/forms';
 import { Anuncios } from 'src/app/models/anuncios';
+
+declare var M: any; //toma un dato desde materialize
+
 @Component({
   selector: 'app-anuncios',
   templateUrl: './anuncios.component.html',
@@ -20,7 +23,9 @@ export class AnunciosComponent implements OnInit {
     if(form){
       this.anunciosService.postAnuncio(form.value)
         .subscribe(res => { //escucha el retorno del servidor
-          console.log(res);
+          //console.log(res);
+          this.ResetearFormulario(form);
+          M.Toast({html: 'Guardado correctamente'});
       });
     }
   }
