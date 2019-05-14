@@ -11,6 +11,7 @@ import { Anuncios } from '../models/anuncios';
 export class AnunciosService 
 {
   readonly URL_API = 'https://mean-templay.herokuapp.com/';
+  //readonly URL_API = 'https://localhost:3000';
   anuncioSeleccionado: Anuncios; 
   anuncios: Anuncios[]; //aqui se va a guardar lo que retorne de la consulta
 
