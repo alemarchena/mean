@@ -17,7 +17,14 @@ controladorAnuncio.leerAnuncio = async (req,res) => {
 }
 
 controladorAnuncio.crearAnuncio = async (req,res) => {
-    const anuncio = new ModeloAnuncio(req.body);
+    const anuncio = new ModeloAnuncio({
+        nombre: req.body.nombre,
+        idmapa: req.body.idmapa,
+        titulo: req.body.titulo,
+        descripcion: req.body.descripcion,
+        precio: req.body.precio,
+        imagen: req.body.imagen
+    });
     await anuncio.save();
     res.json({
         'estado': 'Anuncio guardado'

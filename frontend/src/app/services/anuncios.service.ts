@@ -10,7 +10,7 @@ import { Anuncios } from '../models/anuncios';
 //Servicio que permite hacer el CRUD
 export class AnunciosService 
 {
-  readonly URL_API = 'http://localhost:3000';
+  readonly URL_API = 'https://mean-templay.herokuapp.com/';
   anuncioSeleccionado: Anuncios; 
   anuncios: Anuncios[]; //aqui se va a guardar lo que retorne de la consulta
 

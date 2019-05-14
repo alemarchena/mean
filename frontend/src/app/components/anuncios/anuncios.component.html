@@ -7,6 +7,7 @@
           y le asigno el formulario completo para luego pasarlo al método AgregarAnuncio-->
           <form #variableFormulario="ngForm" (ngSubmit)="AgregarAnuncio(variableFormulario)">
             <!-- Input de Materialize-->
+            <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado._id">
             <div class="row">
               <div class="input-field col s12">
                 <input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="anunciosService.anuncioSeleccionado.nombre" placeholder="Ingrese el nombre del anuncio">
@@ -44,7 +45,32 @@
       </div>
     </div>
     <div class="col s7">
-
+        <table>
+          <thead>
+              <th>Nombre</th>
+              <th>Titulo</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+          </thead>
+          <tbody>
+              <tr *ngFor="let anuncio of anunciosService.anuncios" >
+                <td>{{anuncio.nombre}}</td>
+                <td>{{anuncio.titulo}}</td>
+                <td>{{anuncio.descripcion}}</td>
+                <td>{{anuncio.precio}}</td>
+                <td>
+                  <a (click)="EditarAnuncio(anuncio)" class="btn">
+                    <i class="material-icons">edit</i>
+                  </a>
+                </td>
+                <td>
+                  <a (click)="EliminarAnuncio(anuncio._id)" class="btn">
+                    <i class="material-icons">delete</i>
+                  </a>
+                </td>
+              </tr>
+          </tbody>
+        </table>
     </div>
   </div>
 </div>
