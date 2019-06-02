@@ -6,8 +6,8 @@ const anuncioscol = new Schema({
     nombre:     {type: String,required:true},
     idmapa:     {type: Number},
     titulo:     {type: String,required:true},
-    descripcion:{ type:String,required:true},
-    precio:     {type:Number,required:true},
+    descripcion:{type:String,required:true},
+    precio:     {type:String,required:true},
     imagen:     {type: String,required:true}
 });
 
