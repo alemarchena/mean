@@ -18,8 +18,9 @@ controladorAnuncio.leerAnuncio = async (req,res) => {
 
 controladorAnuncio.crearAnuncio = async (req,res) => {
     const anuncio = new ModeloAnuncio({
-        nombre: req.body.nombre,
+        idpanel: req.body.idpanel,
         idmapa: req.body.idmapa,
+        nombre: req.body.nombre,
         titulo: req.body.titulo,
         descripcion: req.body.descripcion,
         precio: req.body.precio,
