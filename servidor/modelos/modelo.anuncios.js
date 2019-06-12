@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose; //no necesito todo mongoose, entonces solo armo el esquema
 
 const anuncioscol = new Schema({
-    idpanel:    {type: Number },
     idmapa:     {type: Number },
     nombre:     {type: String,required:true},
     titulo:     {type: String,required:true},
