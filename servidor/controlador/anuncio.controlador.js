@@ -35,8 +35,9 @@ controladorAnuncio.crearAnuncio = async (req,res) => {
 controladorAnuncio.actualizarAnuncio = async (req,res) => {
     const {id} = req.params; //le digo dame id que este dentro de params
     const anuncio = {
-        nombre : req.body.nombre,
+        idpanel: req.body.idpanel,
         idmapa : req.body.idmapa,
+        nombre: req.body.nombre,
         titulo : req.body.titulo,
         descripcion : req.body.descripcion,
         precio : req.body.precio,
