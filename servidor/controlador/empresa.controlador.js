@@ -1,5 +1,5 @@
 //va a tener las funciones para trabajar con la base de datos
-const ModeloAnuncio = require('../modelos/modelo.empresas');
+const ModeloEmpresa = require('../modelos/modelo.empresas');
 
 
 const controladorEmpresa = {};
