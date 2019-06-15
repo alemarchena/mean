@@ -17,6 +17,7 @@ app.use(cors());
 
 const expressLayouts = require('express-ejs-layouts')
 const rutas = require('./rutas/anuncios.rutas');
+const rutasE = require('./rutas/empresas.rutas');
 
 //configuraciones
 app.set('puerto', process.env.PORT || 3000)
@@ -26,7 +27,9 @@ app.use(morgan('start')); //las peticiones pasan por MORGAN y devuelven info tal
 app.use(express.json()); //los datos que llegan del navegador se interpretan como json
 
 app.use(express.static('/servidor/public'));
+
 app.use('/', rutas);
+app.use('/empresas/', rutasE);
 
 
 // Configurar cabeceras y cors
