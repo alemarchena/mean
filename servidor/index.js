@@ -29,7 +29,7 @@ app.use(express.json()); //los datos que llegan del navegador se interpretan com
 app.use(express.static('/servidor/public'));
 
 app.use('/', rutas);
-app.use('/empresas/', rutasE);
+app.use('/', rutasE);
 
 
 // Configurar cabeceras y cors
