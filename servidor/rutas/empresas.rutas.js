@@ -1,12 +1,12 @@
 const express = require('express');
-const router = express.Router(); //guarda las rutas al servidor
-const controladorAnuncio = require('../controlador/empresa.controlador');
+const routerE = express.Router(); //guarda las rutas al servidor
+const controladorEmpresa = require('../controlador/empresa.controlador');
 
 
-router.get('/empresas/', controladorEmpresa.leerEmpresas);
-router.get('/empresas/:id', controladorEmpresa.leerEmpresa);
-router.post('/empresas/', controladorEmpresa.crearEmpresa);
-router.put('/empresas/:id', controladorEmpresa.actualizarEmpresa);
-router.delete('/empresas/:id', controladorEmpresa.borrarEmpresa);
+routerE.get('/empresas/', controladorEmpresa.leerEmpresas);
+routerE.get('/empresas/:id', controladorEmpresa.leerEmpresa);
+routerE.post('/empresas/', controladorEmpresa.crearEmpresa);
+routerE.put('/empresas/:id', controladorEmpresa.actualizarEmpresa);
+routerE.delete('/empresas/:id', controladorEmpresa.borrarEmpresa);
 
-module.exports = router;
+module.exports = routerE;
