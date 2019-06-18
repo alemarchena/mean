@@ -22,6 +22,12 @@ controladorAnuncio.crearAnuncio = async (req,res) => {
         nombre: req.body.nombre,
         titulo: req.body.titulo,
         descripcion: req.body.descripcion,
+        nombreP: req.body.nombreP,
+        tituloP: req.body.tituloP,
+        descripcionP: req.body.descripcionP,
+        nombreI: req.body.nombreI,
+        tituloI: req.body.tituloI,
+        descripcionI: req.body.descripcionI,
         precio: req.body.precio,
         imagen: req.body.imagen
     });
@@ -38,6 +44,12 @@ controladorAnuncio.actualizarAnuncio = async (req,res) => {
         nombre: req.body.nombre,
         titulo : req.body.titulo,
         descripcion : req.body.descripcion,
+        nombreP: req.body.nombreP,
+        tituloP : req.body.tituloP,
+        descripcionP : req.body.descripcionP,
+        nombreI: req.body.nombreI,
+        tituloI : req.body.tituloI,
+        descripcionI : req.body.descripcionI,
         precio : req.body.precio,
         imagen : req.body.imagen
     }

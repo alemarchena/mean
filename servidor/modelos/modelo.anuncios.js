@@ -7,6 +7,12 @@ const anuncioscol = new Schema({
     nombre:     {type: String,required:true},
     titulo:     {type: String,required:true},
     descripcion:{type:String,required:true},
+    nombreP:     {type: String,required:true},
+    tituloP:     {type: String,required:true},
+    descripcionP:{type:String,required:true},
+    nombreI: { type: String, required: true },
+    tituloI: { type: String, required: true },
+    descripcionI: { type: String, required: true },
     precio:     {type:String,required:true},
     imagen:     {type: String,required:true}
 });
