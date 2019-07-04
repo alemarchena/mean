@@ -5,18 +5,20 @@
   "main": "index.js",
   "scripts": {
     "start": "node servidor/index.js",
-    "dev": "nodemon servidor/index.js"
+    "startempresa": "node servidorempresa/index.js",
+    "dev": "nodemon servidor/index.js",
+    "devempresa": "nodemon servidorempresa/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Templay Studios - Ale Marchena",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
-    "mongoose": "^5.4.18",
+    "mongoose": "^5.6.0",
     "morgan": "^1.9.1"
   },
   "devDependencies": {

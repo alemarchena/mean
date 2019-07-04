@@ -29,7 +29,8 @@ controladorAnuncio.crearAnuncio = async (req,res) => {
         tituloI: req.body.tituloI,
         descripcionI: req.body.descripcionI,
         precio: req.body.precio,
-        imagen: req.body.imagen
+        imagen: req.body.imagen,
+        url: req.body.url
     });
     await anuncio.save();
     res.json({
@@ -51,7 +52,8 @@ controladorAnuncio.actualizarAnuncio = async (req,res) => {
         tituloI : req.body.tituloI,
         descripcionI : req.body.descripcionI,
         precio : req.body.precio,
-        imagen : req.body.imagen
+        imagen : req.body.imagen,
+        url: req.body.url
     }
     await ModeloAnuncio.findByIdAndUpdate(id,{ $set:anuncio },{new: true}); //le digo que busco por id y que datos quiero actualizar, con new : true si no existe lo crea
     res.json({
